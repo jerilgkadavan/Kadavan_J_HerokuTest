@@ -11,6 +11,7 @@ router.get('/', function(req, res, next) {
 router.get('/user', function(req, res, next) {
   console.log('data:', data);
   console.log('user:', req.params.user);
+  res.render('userpage', data[req.params.user]);
   // res.render('index', { title: 'Express', message: "Welcome to your first express app"});
 });
 
